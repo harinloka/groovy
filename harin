@@ -1,7 +1,9 @@
 node
 {
 stage('git clone'){
-git '
+git 'https://github.com/harinloka/groovy.git'
 }
-
-stage('maven targets')
+stage('maven targets'){
+sh label: '', script: 'mvn install'
+}
+}
